@@ -1,18 +1,27 @@
 <template>
-  <main class="min-h-screen bg-slate-950 text-slate-100">
-    <section class="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20">
+  <main class="relative min-h-screen overflow-hidden bg-[#0a0a12] text-slate-100">
+    <!-- Ambient background glow -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-40 left-1/4 h-[36rem] w-[36rem] rounded-full bg-cyan-500/25 blur-[120px]"></div>
+      <div class="absolute top-1/3 -right-40 h-[32rem] w-[32rem] rounded-full bg-fuchsia-500/20 blur-[130px]"></div>
+      <div class="absolute bottom-0 left-1/3 h-[28rem] w-[28rem] rounded-full bg-indigo-500/20 blur-[110px]"></div>
+    </div>
+
+    <section class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-20">
       <!-- Hero -->
-      <div class="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
-        <div>
-          <p class="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
+      <div class="grid gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
+        <div
+            class="rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-2xl"
+        >
+          <p class="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-300/90">
             Portfolio / Resume
           </p>
 
-          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 class="text-4xl font-bold tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
             Chris Maennche
           </h1>
 
-          <p class="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
+          <p class="mt-4 max-w-2xl text-lg leading-8 text-slate-300/90">
             Full-stack developer focused on practical web applications, thoughtful UX, and reliable implementation.
             I build with modern JavaScript frameworks, backend tooling, and a healthy respect for things that should
             have been documented better the first time.
@@ -21,42 +30,44 @@
           <div class="mt-8 flex flex-wrap gap-4">
             <a
                 href="#projects"
-                class="rounded-xl bg-cyan-400 px-5 py-3 font-medium text-slate-950 transition hover:bg-cyan-300"
+                class="rounded-full border border-white/20 bg-white/90 px-6 py-3 font-medium text-slate-900 shadow-lg shadow-cyan-500/20 backdrop-blur-xl transition hover:bg-white"
             >
               View Projects
             </a>
             <a
                 href="#contact"
-                class="rounded-xl border border-slate-700 px-5 py-3 font-medium text-slate-100 transition hover:bg-slate-900"
+                class="rounded-full border border-white/15 bg-white/[0.06] px-6 py-3 font-medium text-slate-100 backdrop-blur-xl transition hover:bg-white/[0.12]"
             >
               Contact Me
             </a>
           </div>
         </div>
 
-        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl shadow-cyan-950/20">
-          <h2 class="text-xl font-semibold">Quick Info</h2>
+        <div
+            class="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-2xl"
+        >
+          <h2 class="text-xl font-semibold text-white">Quick Info</h2>
           <dl class="mt-6 space-y-4 text-sm">
-            <div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-3 backdrop-blur-xl">
               <dt class="text-slate-400">Role</dt>
               <dd class="mt-1 text-slate-100">Developer</dd>
             </div>
-            <div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-3 backdrop-blur-xl">
               <dt class="text-slate-400">Location</dt>
               <dd class="mt-1 text-slate-100">Oklahoma, USA</dd>
             </div>
-            <div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-3 backdrop-blur-xl">
               <dt class="text-slate-400">Focus</dt>
               <dd class="mt-1 text-slate-100">Web apps, portals, and product development</dd>
             </div>
-            <div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-3 backdrop-blur-xl">
               <dt class="text-slate-400">GitHub</dt>
               <dd class="mt-1 text-slate-100">
                 <a
                     href="https://github.com/cmaennche"
                     target="_blank"
                     rel="noreferrer"
-                    class="text-cyan-400 hover:underline"
+                    class="text-cyan-300 hover:underline"
                 >
                   github.com/cmaennche
                 </a>
@@ -68,22 +79,26 @@
 
       <!-- About -->
       <section class="grid gap-6 lg:grid-cols-2">
-        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
-          <h2 class="text-2xl font-semibold">About</h2>
-          <p class="mt-4 leading-7 text-slate-300">
+        <div
+            class="rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition hover:bg-white/[0.07]"
+        >
+          <h2 class="text-2xl font-semibold text-white">About</h2>
+          <p class="mt-4 leading-7 text-slate-300/90">
             I design and build software that solves real problems. My work spans frontend interfaces, backend logic,
             and full-stack application development. I care about clarity, performance, and shipping things that work
             without drama. A bold strategy, obviously.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
-          <h2 class="text-2xl font-semibold">Skills</h2>
+        <div
+            class="rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition hover:bg-white/[0.07]"
+        >
+          <h2 class="text-2xl font-semibold text-white">Skills</h2>
           <div class="mt-4 flex flex-wrap gap-3">
             <span
                 v-for="skill in skills"
                 :key="skill"
-                class="rounded-full border border-slate-700 bg-slate-950 px-4 py-2 text-sm text-slate-200"
+                class="rounded-full border border-white/15 bg-white/[0.08] px-4 py-2 text-sm text-slate-100 backdrop-blur-xl transition hover:bg-white/[0.14]"
             >
               {{ skill }}
             </span>
@@ -94,22 +109,24 @@
       <!-- Projects -->
       <section id="projects" class="space-y-6">
         <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-400">Projects</p>
-          <h2 class="mt-2 text-3xl font-semibold">Featured Work</h2>
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/90">Projects</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">Featured Work</h2>
         </div>
 
         <div class="grid gap-6 md:grid-cols-2">
           <article
               v-for="project in projects"
               :key="project.name"
-              class="rounded-3xl border border-slate-800 bg-slate-900 p-8 transition hover:-translate-y-1 hover:border-cyan-500/40"
+              class="rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.08]"
           >
             <div class="flex items-start justify-between gap-4">
               <div>
-                <h3 class="text-xl font-semibold">{{ project.name }}</h3>
-                <p class="mt-2 leading-7 text-slate-300">{{ project.description }}</p>
+                <h3 class="text-xl font-semibold text-white">{{ project.name }}</h3>
+                <p class="mt-2 leading-7 text-slate-300/90">{{ project.description }}</p>
               </div>
-              <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-300">
+              <span
+                  class="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-200 backdrop-blur-xl"
+              >
                 Featured
               </span>
             </div>
@@ -118,7 +135,7 @@
               <span
                   v-for="tech in project.tech"
                   :key="tech"
-                  class="rounded-full bg-slate-950 px-3 py-1 text-xs text-slate-300"
+                  class="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1 text-xs text-slate-200 backdrop-blur-xl"
               >
                 {{ tech }}
               </span>
@@ -129,7 +146,7 @@
                   :href="project.link"
                   target="_blank"
                   rel="noreferrer"
-                  class="text-cyan-400 hover:underline"
+                  class="text-cyan-300 hover:underline"
               >
                 View Project →
               </a>
@@ -139,20 +156,22 @@
       </section>
 
       <!-- Experience -->
-      <section class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
-        <h2 class="text-2xl font-semibold">Experience</h2>
+      <section
+          class="rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+      >
+        <h2 class="text-2xl font-semibold text-white">Experience</h2>
         <div class="mt-6 space-y-6">
-          <div class="border-l border-slate-700 pl-4">
-            <h3 class="text-lg font-medium">Studio.Maennche.com</h3>
-            <p class="mt-1 text-slate-300">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl">
+            <h3 class="text-lg font-medium text-white">Studio.Maennche.com</h3>
+            <p class="mt-1 text-slate-300/90">
               Worked on the Studio.Maennche.com platform, contributing to the development and refinement of the
               product experience.
             </p>
           </div>
 
-          <div class="border-l border-slate-700 pl-4">
-            <h3 class="text-lg font-medium">portal.crowdchow.app</h3>
-            <p class="mt-1 text-slate-300">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl">
+            <h3 class="text-lg font-medium text-white">portal.crowdchow.app</h3>
+            <p class="mt-1 text-slate-300/90">
               Built portal.crowdchow.app, developing the customer-facing portal and supporting the core experience.
             </p>
           </div>
@@ -160,9 +179,12 @@
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
-        <h2 class="text-2xl font-semibold">Contact</h2>
-        <p class="mt-4 max-w-2xl leading-7 text-slate-300">
+      <section
+          id="contact"
+          class="rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+      >
+        <h2 class="text-2xl font-semibold text-white">Contact</h2>
+        <p class="mt-4 max-w-2xl leading-7 text-slate-300/90">
           If you'd like to talk about web development, product work, or a project that needs to be built without
           unnecessary ceremony, feel free to reach out.
         </p>
@@ -172,13 +194,13 @@
               href="https://github.com/cmaennche"
               target="_blank"
               rel="noreferrer"
-              class="rounded-xl bg-cyan-400 px-5 py-3 font-medium text-slate-950 transition hover:bg-cyan-300"
+              class="rounded-full border border-white/20 bg-white/90 px-6 py-3 font-medium text-slate-900 shadow-lg shadow-cyan-500/20 backdrop-blur-xl transition hover:bg-white"
           >
             GitHub Profile
           </a>
           <a
               href="mailto:christopher@maennche.com"
-              class="rounded-xl border border-slate-700 px-5 py-3 font-medium text-slate-100 transition hover:bg-slate-950"
+              class="rounded-full border border-white/15 bg-white/[0.06] px-6 py-3 font-medium text-slate-100 backdrop-blur-xl transition hover:bg-white/[0.12]"
           >
             Email Me
           </a>
