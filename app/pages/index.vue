@@ -2,19 +2,19 @@
   <main class="relative min-h-screen overflow-hidden bg-[#070b14] text-slate-100">
     <!-- Background: layered radial color fields + grid + grain, so blur/saturate has something to work with -->
     <div class="pointer-events-none fixed inset-0 -z-10">
+<!--      <div-->
+<!--          class="absolute inset-0 opacity-[0.06]"-->
+<!--          style="background-image: linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px); background-size: 48px 48px;"-->
+<!--      ></div>-->
+<!--      <div-->
+<!--          class="absolute inset-0 opacity-[0.4] mix-blend-overlay"-->
+<!--          :style="{ backgroundImage: `url(${noiseDataUrl})` }"-->
+<!--      ></div>-->
+<!--      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#070b14]"></div>-->
       <div
-          class="absolute inset-0 bg-cover bg-center"
-          style="background-image: url(/background.png);"
-      ></div>
-      <div
-          class="absolute inset-0 opacity-[0.06]"
-          style="background-image: linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px); background-size: 48px 48px;"
-      ></div>
-      <div
-          class="absolute inset-0 opacity-[0.4] mix-blend-overlay"
-          :style="{ backgroundImage: `url(${noiseDataUrl})` }"
-      ></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#070b14]"></div>
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url(/background.png);"
+    ></div>
     </div>
 
     <section class="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 py-20">
