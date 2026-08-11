@@ -1,10 +1,16 @@
 <template>
-  <main class="relative min-h-screen overflow-hidden bg-[#0a0a12] text-slate-100">
-    <!-- Ambient background glow -->
+  <main class="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0b1120] via-[#0e1a2e] to-[#0a1220] text-slate-100">
+    <!-- Ambient background: grid texture + saturated color blobs so the glass blur reads clearly -->
     <div class="pointer-events-none fixed inset-0 -z-10">
-      <div class="absolute -top-40 left-1/4 h-[36rem] w-[36rem] rounded-full bg-cyan-500/25 blur-[120px]"></div>
-      <div class="absolute top-1/3 -right-40 h-[32rem] w-[32rem] rounded-full bg-fuchsia-500/20 blur-[130px]"></div>
-      <div class="absolute bottom-0 left-1/3 h-[28rem] w-[28rem] rounded-full bg-indigo-500/20 blur-[110px]"></div>
+      <div
+          class="absolute inset-0 opacity-[0.07]"
+          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 56px 56px;"
+      ></div>
+      <div class="absolute -top-32 left-[8%] h-[34rem] w-[34rem] rounded-full bg-cyan-400/40 blur-[110px]"></div>
+      <div class="absolute top-1/4 right-[5%] h-[30rem] w-[30rem] rounded-full bg-fuchsia-500/35 blur-[120px]"></div>
+      <div class="absolute top-[55%] left-[35%] h-[26rem] w-[26rem] rounded-full bg-violet-500/30 blur-[110px]"></div>
+      <div class="absolute bottom-[-6rem] right-[15%] h-[30rem] w-[30rem] rounded-full bg-emerald-400/25 blur-[130px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a1220]/60"></div>
     </div>
 
     <section class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-20">
