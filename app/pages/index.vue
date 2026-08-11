@@ -3,13 +3,8 @@
     <!-- Background: layered radial color fields + grid + grain, so blur/saturate has something to work with -->
     <div class="pointer-events-none fixed inset-0 -z-10">
       <div
-          class="absolute inset-0"
-          style="background:
-            radial-gradient(38rem 38rem at 12% -8%, rgba(56,214,255,0.55), transparent 60%),
-            radial-gradient(34rem 34rem at 90% 10%, rgba(217,70,239,0.45), transparent 60%),
-            radial-gradient(30rem 30rem at 60% 55%, rgba(139,92,246,0.4), transparent 60%),
-            radial-gradient(36rem 36rem at 15% 95%, rgba(52,211,153,0.35), transparent 60%),
-            radial-gradient(30rem 30rem at 95% 90%, rgba(251,146,60,0.3), transparent 60%);"
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: url(/background.png);"
       ></div>
       <div
           class="absolute inset-0 opacity-[0.06]"
